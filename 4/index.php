@@ -1,7 +1,21 @@
 <?php
-// Genera un valor entre 1 y 100, y muestra si es par o si es impar
 
-//Aquí genero el valor
+if (isset($_POST['generatePassword'])) {
+    // Función para generar una contraseña aleatoria
+    function generatePassword($length = 8)
+    {
+        $password = '';
+        for ($i = 0; $i < $length; $i++) {
+            $asciiCode = rand(65, 127);
+            $password .= chr($asciiCode);
+        }
+        return $password;
+    }
+
+    // Genera e imprime la contraseña
+    $generatedPassword = generatePassword();
+    echo "<p>Contraseña generada: $generatedPassword</p>";
+}
 
 
 ?>

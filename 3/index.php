@@ -10,6 +10,19 @@
 //Nota 2: 9
 */
 
+// Crear un array para almacenar las notas
+$notas = array();
+
+// Generar 10 notas aleatorias entre 0 y 10 y almacenarlas en el array
+for ($i = 0; $i < 10; $i++) {
+    $nota = rand(0, 10);
+    $notas[] = $nota;
+}
+
+// Mostrar cada nota en el formato especificado
+foreach ($notas as $index => $nota) {
+    echo "Nota " . ($index + 1) . ": $nota <br />";
+}
 
 
 ?>
